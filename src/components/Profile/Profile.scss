@@ -1,0 +1,11 @@
+.image-text-container {
+    display: flex;
+    align-items: center;
+}
+
+.round-image {
+    width: 30px; /* Ajusta el tamaño según tus necesidades */
+    height: 30px; /* Ajusta el tamaño según tus necesidades */
+    border-radius: 50%; /* Hace que la imagen sea redonda */
+    margin-right: 10px; /* Espacio entre la imagen y el texto */
+  }

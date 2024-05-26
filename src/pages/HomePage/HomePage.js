@@ -15,7 +15,7 @@ const HomePage = () => {
   const productStatus = useSelector(getAllProductsStatus);
 
   useEffect(() => {
-    dispatch(fetchAsyncProducts(30));
+    dispatch(fetchAsyncProducts(200));
   }, [dispatch]);
 
   // randomizing the products in the list

@@ -6,6 +6,7 @@ import { setSidebarOn } from '../../store/sidebarSlice';
 import { getAllCategories } from '../../store/categorySlice';
 import { getAllCarts, getCartItemsCount, getCartTotal } from '../../store/cartSlice';
 import CartModal from "../CartModal/CartModal";
+import { logoImg2 } from '../../utils/images';
 
 const Navbar = () => {
   const dispatch = useDispatch();
@@ -32,9 +33,10 @@ const Navbar = () => {
             <i className='fas fa-bars'></i>
           </button>
           <Link to = "/" className='navbar-brand flex align-center'>
-            <span className='navbar-brand-ico'>
+            {/* <span className='navbar-brand-txt mx-2'>
               <i className='fa-solid fa-bag-shopping'></i>
-            </span>
+            </span> */}
+            <img src = {logoImg2} alt = "" className='navbar-logo'></img>
             <span className='navbar-brand-txt mx-2'>
               <span className='fw-7'>K&K</span>Shop.
             </span>
