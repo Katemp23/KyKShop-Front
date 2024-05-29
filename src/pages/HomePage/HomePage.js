@@ -31,10 +31,10 @@ const HomePage = () => {
     }
   }
 
-  let catProductsOne = products.filter(product => product.category === categories[0]?.slug);
-  let catProductsTwo = products.filter(product => product.category === categories[1]?.slug);
-  let catProductsThree = products.filter(product => product.category === categories[2]?.slug);
-  let catProductsFour = products.filter(product => product.category === categories[3]?.slug);
+  let catProductsOne = products.filter(product => product.category === categories[0]?.name);
+  let catProductsTwo = products.filter(product => product.category === categories[1]?.name);
+  let catProductsThree = products.filter(product => product.category === categories[2]?.name);
+  let catProductsFour = products.filter(product => product.category === categories[3]?.name);
 
   return (
     <main>

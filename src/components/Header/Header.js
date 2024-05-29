@@ -65,7 +65,7 @@ const Header = () => {
                   <Profile/>
                   </>
                 ) : ( <>
-                  <i class="fa-regular fa-user"></i>
+                  <i className="fa-regular fa-user"></i>
                 </>
                 )}
                 {/* <li>
