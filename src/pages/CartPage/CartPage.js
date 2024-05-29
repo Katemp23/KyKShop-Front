@@ -16,8 +16,8 @@ const CartPage = () => {
       <div className='container my-5'>
         <div className='empty-cart flex justify-center align-center flex-column font-manrope'>
           <img src = {shopping_cart} alt = "" />
-          <span className='fw-6 fs-15 text-gray'>Your shopping cart is empty.</span>
-          <Link to = "/" className='shopping-btn bg-orange text-white fw-5'>Go shopping Now</Link>
+          <span className='fw-6 fs-15 text-gray'>Tu cesta de compras esta vacia.</span>
+          <Link to = "/" className='shopping-btn bg-orange text-white fw-5'>Ir de Compras Ahora</Link>
         </div>
       </div>
     )
@@ -33,19 +33,19 @@ const CartPage = () => {
                 <span className='cart-ctxt'>S.N.</span>
               </div>
               <div className='cart-cth'>
-                <span className='cart-ctxt'>Product</span>
+                <span className='cart-ctxt'>Producto</span>
               </div>
               <div className='cart-cth'>
-                <span className='cart-ctxt'>Unit Price</span>
+                <span className='cart-ctxt'>Precio por Unidad</span>
               </div>
               <div className='cart-cth'>
-                <span className='cart-ctxt'>Quantity</span>
+                <span className='cart-ctxt'>Cantidad</span>
               </div>
               <div className='cart-cth'>
-                <span className='cart-ctxt'>Total Price</span>
+                <span className='cart-ctxt'>Precio Total</span>
               </div>
               <div className='cart-cth'>
-                <span className='cart-ctxt'>Actions</span>
+                <span className='cart-ctxt'>Acciones</span>
               </div>
             </div>
           </div>
@@ -85,7 +85,7 @@ const CartPage = () => {
                     </div>
 
                     <div className='cart-ctd'>
-                      <button type = "button" className='delete-btn text-dark' onClick={() => dispatch(removeFromCart(cart?.id))}>Delete</button>
+                      <button type = "button" className='delete-btn text-dark' onClick={() => dispatch(removeFromCart(cart?.id))}>Borrar</button>
                     </div>
                   </div>
                 )
@@ -97,7 +97,7 @@ const CartPage = () => {
             <div className='cart-cfoot-l'>
               <button type='button' className='clear-cart-btn text-danger fs-15 text-uppercase fw-4' onClick={() => dispatch(clearCart())}>
                 <i className='fas fa-trash'></i>
-                <span className='mx-1'>Clear Cart</span>
+                <span className='mx-1'>Eliminar Productos</span>
               </button>
             </div>
 

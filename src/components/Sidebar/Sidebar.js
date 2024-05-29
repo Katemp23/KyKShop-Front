@@ -22,7 +22,7 @@ const Sidebar = () => {
         <i className='fas fa-times'></i>
       </button>
       <div className='sidebar-cnt'>
-        <div className='cat-title fs-17 text-uppercase fw-6 ls-1h'>All Categories</div>
+        <div className='cat-title fs-17 text-uppercase fw-6 ls-1h'>Todas las Categorías</div>
         <ul className='cat-list'>
           {
             categories.map((category, idx) => {
