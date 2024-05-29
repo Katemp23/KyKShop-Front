@@ -15,7 +15,7 @@ const Product = ({product}) => {
           <div>
           {product?.brand && ( //Sólo se muestra si tiene brand
             <div className='brand'>
-            <span>Brand: </span>
+            <span>Marca: </span>
             <span className='fw-7'>{product.brand}</span>
           </div>
     )}

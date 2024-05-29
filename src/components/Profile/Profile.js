@@ -8,7 +8,7 @@ const Profile = () => {
   console.log(user);
 
   if (isLoading) {
-    return <div>Loading ...</div>;
+    return <div>Cargando ...</div>;
   }
 
   return (

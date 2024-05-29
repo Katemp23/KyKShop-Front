@@ -103,14 +103,14 @@ const ProductSinglePage = () => {
                 </div>
                 <div className='info flex align-center flex-wrap fs-14'>
                   <div className='rating'>
-                    <span className='text-orange fw-5'>Rating:</span>
+                    <span className='text-orange fw-5'>Clasificación:</span>
                     <span className='mx-1'>
                       {product?.rating}
                     </span>
                   </div>
                   <div className='vert-line'></div>
                   <div className='brand'>
-                    <span className='text-orange fw-5'>Brand:</span>
+                    <span className='text-orange fw-5'>Marca:</span>
                     <span className='mx-1'>{product?.brand ? product.brand : "N/A"}</span>
                   </div>
                   <div className='vert-line'></div>
@@ -128,7 +128,7 @@ const ProductSinglePage = () => {
                       {formatPrice(product?.price)}
                     </div>
                     <span className='fs-14 mx-2 text-dark'>
-                      Inclusive of all taxes
+                      Impuestos incluidos
                     </span>
                   </div>
 
@@ -154,17 +154,17 @@ const ProductSinglePage = () => {
                     </button>
                   </div>
                   {
-                    (product?.stock === 0) ? <div className ='qty-error text-uppercase bg-danger text-white fs-12 ls-1 mx-2 fw-5'>out of stock</div> : ""
+                    (product?.stock === 0) ? <div className ='qty-error text-uppercase bg-danger text-white fs-12 ls-1 mx-2 fw-5'>Agotado</div> : ""
                   }
                 </div>
 
                 <div className='btns'>
                   <button type = "button" className='add-to-cart-btn btn'>
                     <i className='fas fa-shopping-cart'></i>
-                    <span className='btn-text mx-2' onClick={() => { addToCartHandler(product)}}>add to cart</span>
+                    <span className='btn-text mx-2' onClick={() => { addToCartHandler(product)}}>Agregar al carrito</span>
                   </button>
                   <button type = "button" className='buy-now btn mx-3'>
-                    <span className='btn-text'>buy now</span>
+                    <span className='btn-text'>Comprar Ahora</span>
                   </button>
                 </div>
               </div>
