@@ -26,7 +26,7 @@ const CartModal = ({carts}) => {
               })
             }
 
-            <div className='text-capitalize view-cart-btn bg-orange fs-15 font-manrope text-center'>Ver mis Compras</div>
+            <div className=' view-cart-btn bg-orange fs-15 font-manrope text-center'>Ir al carrito de compras</div>
           </div>) : (
           <div className = "flex flex-column align-center justify-center cart-modal-empty">
             <img src = {shopping_cart} alt = "" className='' />

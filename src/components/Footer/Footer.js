@@ -9,7 +9,7 @@ const Footer = () => {
         <div className='flex align-center justify-center text-white fw-3 fs-14'>
           <Link to = "/" className='text-uppercase'>Política de privacidad</Link>
           <div className='vert-line'></div>
-          <Link to = "/" className='text-uppercase'>Duración del servicio</Link>
+          <Link to = "/" className='text-uppercase'>Términos y condiciones</Link>
           <div className='vert-line'></div>
           <Link to = "/" className='text-uppercase'>Acerca de K&KShop.</Link>
         </div>

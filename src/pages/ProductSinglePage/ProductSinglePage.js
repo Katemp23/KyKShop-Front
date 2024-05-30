@@ -103,7 +103,7 @@ const ProductSinglePage = () => {
                 </div>
                 <div className='info flex align-center flex-wrap fs-14'>
                   <div className='rating'>
-                    <span className='text-orange fw-5'>Clasificación:</span>
+                    <span className='text-orange fw-5'>Calificación:</span>
                     <span className='mx-1'>
                       {product?.rating}
                     </span>
@@ -115,7 +115,7 @@ const ProductSinglePage = () => {
                   </div>
                   <div className='vert-line'></div>
                   <div className='brand'>
-                    <span className='text-orange fw-5'>Category:</span>
+                    <span className='text-orange fw-5'>Categoría:</span>
                     <span className='mx-1 text-capitalize'>
                       {product?.category ? product.category.replace("-", " ") : ""}
                     </span>
@@ -128,7 +128,7 @@ const ProductSinglePage = () => {
                       {formatPrice(product?.price)}
                     </div>
                     <span className='fs-14 mx-2 text-dark'>
-                      Impuestos incluidos
+                      Todos los impuestos incluidos
                     </span>
                   </div>
 
@@ -143,7 +143,7 @@ const ProductSinglePage = () => {
                 </div>
 
                 <div className='qty flex align-center my-4'>
-                  <div className='qty-text'>Quantity:</div>
+                  <div className='qty-text'>Cantidad:</div>
                   <div className='qty-change flex align-center mx-3'>
                     <button type = "button" className='qty-decrease flex align-center justify-center' onClick={() => decreaseQty()}>
                       <i className='fas fa-minus'></i>
@@ -164,7 +164,7 @@ const ProductSinglePage = () => {
                     <span className='btn-text mx-2' onClick={() => { addToCartHandler(product)}}>Agregar al carrito</span>
                   </button>
                   <button type = "button" className='buy-now btn mx-3'>
-                    <span className='btn-text'>Comprar Ahora</span>
+                    <span className='btn-text'>Comprar ahora</span>
                   </button>
                 </div>
               </div>

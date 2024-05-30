@@ -76,7 +76,10 @@ const cartSlice = createSlice({
 
                     if(action.payload.type === "INC"){
                         tempQty++;
-                        if(tempQty === item.stock) tempQty = item.stock;
+                        console.log(item.stock);
+                        console.log(tempQty === item.stock);
+                        console.log(tempQty);
+                        if(tempQty > item.stock) tempQty = item.stock;
                         tempTotalPrice = tempQty * item.discountedPrice;
                     }
 

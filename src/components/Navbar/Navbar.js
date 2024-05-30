@@ -46,7 +46,7 @@ const Navbar = () => {
         <div className='navbar-collapse w-100'>
           <div className='navbar-search bg-white'>
             <div className='flex align-center'>
-              <input type = "text" className='form-control fs-14' placeholder='Search your preferred items here' onChange={(e) => handleSearchTerm(e)} />
+              <input type = "text" className='form-control fs-14' placeholder='Busca tus productos favoritos aquí' onChange={(e) => handleSearchTerm(e)} />
               <Link to = {`search/${searchTerm}`} className='text-white search-btn flex align-center justify-center'>
                   <i className='fa-solid fa-magnifying-glass'></i>
                 </Link>

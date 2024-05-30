@@ -103,11 +103,11 @@ const CartPage = () => {
 
             <div className='cart-cfoot-r flex flex-column justify-end'>
               <div className='total-txt flex align-center justify-end'>
-                <div className='font-manrope fw-5'>Total ({itemsCount}) items: </div>
+                <div className='font-manrope fw-5'>Total ({itemsCount}) productos: </div>
                 <span className='text-orange fs-22 mx-2 fw-6'>{formatPrice(totalAmount)}</span>
               </div>
 
-              <button type = "button" className='checkout-btn text-white bg-orange fs-16'>Check Out</button>
+              <button type = "button" className='checkout-btn text-white bg-orange fs-16'>Ir al pago</button>
             </div>
           </div>
         </div>

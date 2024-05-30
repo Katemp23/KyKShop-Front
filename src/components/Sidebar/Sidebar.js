@@ -29,7 +29,7 @@ const Sidebar = () => {
               return (
                 <li key = {idx} onClick = {() => dispatch(setSidebarOff())}>
                   {/* <Link to = {`category/${category.slug}`} className='cat-list-link text-capitalize'>{category.name}</Link> */}
-                  <Link to = {`category/${category.slug}`} className='cat-list-link text-capitalize'>{category.name}</Link>
+                  <Link to = {`category/${category.name}`} className='cat-list-link text-capitalize'>{category.slug}</Link>
                 </li>
               )
             })
