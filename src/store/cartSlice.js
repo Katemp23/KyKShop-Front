@@ -1,4 +1,5 @@
 import {createSlice} from "@reduxjs/toolkit";
+import { notification } from 'antd';
 
 const fetchFromLocalStorage = () => {
     let cart = localStorage.getItem('cart');
@@ -74,12 +75,15 @@ const cartSlice = createSlice({
                     let tempQty = item.quantity;
                     let tempTotalPrice = item.totalPrice;
 
-                    if(action.payload.type === "INC"){
+                    if(action.payload.type === "INC"){  
                         tempQty++;
-                        console.log(item.stock);
-                        console.log(tempQty === item.stock);
-                        console.log(tempQty);
-                        if(tempQty > item.stock) tempQty = item.stock;
+                        if(tempQty > item.stock) {
+                            tempQty = item.stock;
+                            notification.info({
+                                message: `Máximo de unidades disponibles: ${tempQty}`,
+                                description: 'Por el momento no hay mas unidades disponibles para este producto',
+                              });
+                        }
                         tempTotalPrice = tempQty * item.discountedPrice;
                     }
 

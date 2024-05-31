@@ -9,6 +9,8 @@ import Sidebar from "./components/Sidebar/Sidebar";
 import Footer from "./components/Footer/Footer";
 import store from "./store/store";
 import {Provider} from "react-redux";
+import CheckoutPage from './pages/CheckOutPage/CheckoutPage';
+import SuccessfulSalePage from './pages/SuccessfulSalePage/SuccessfulSalePage';
 
 function App() {
   return (
@@ -29,6 +31,10 @@ function App() {
             <Route path = "/cart" element = {<Cart />} />
             {/* searched products */}
             <Route path = "/search/:searchTerm" element = {<Search />} />
+            {/* Checkout */}
+            <Route path = "/checkout" element = {<CheckoutPage />} />
+            {/* Compra exitosa */}
+            <Route path = "/compra-exitosa" element = {<SuccessfulSalePage />} />
           </Routes>
 
           <Footer />

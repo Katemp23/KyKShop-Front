@@ -42,7 +42,7 @@
         padding: 0;
     }
     .cart-ctable{
-        min-width: 1000px;
+        min-width: 100%;
         .cart-ctr{
             grid-template-columns: 1fr 4fr 2fr 2fr 2fr 2fr;
             min-height: 40px;
@@ -57,6 +57,7 @@
             box-shadow: rgba(60, 64, 67, 0.01) 0px 1px 2px 0px, rgba(60, 64, 67, 0.01) 0px 1px 3px 1px;
             border-radius: 3px;
             color: rgba(0, 0, 0, 0.6);
+            text-align: center;
         }
         .cart-cbody{
             padding-right: 2rem;
@@ -65,10 +66,14 @@
             border-radius: 3px;
             font-size: 14.5px;
             color: rgba(0, 0, 0, 0.6);
+            .cart-ctd{
+                text-align: center;
+            }
         }
         .delete-btn{
             font-size: 14px;
             transition: $transition-ease;
+            text-align: center;
             &:hover{
                 color: $clr-danger;
             }

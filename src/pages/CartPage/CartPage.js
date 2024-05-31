@@ -5,11 +5,21 @@ import { shopping_cart } from '../../utils/images';
 import { Link } from 'react-router-dom';
 import { formatPrice } from '../../utils/helpers';
 import { getAllCarts, removeFromCart, toggleCartQty, clearCart } from '../../store/cartSlice';
+import { useAuth0 } from '@auth0/auth0-react';
+import { notification } from 'antd';
 
 const CartPage = () => {
   const dispatch = useDispatch();
   const carts = useSelector(getAllCarts);
   const { itemsCount, totalAmount} = useSelector((state) => state.cart);
+  const { isAuthenticated } = useAuth0();
+
+  const validarEmail = () => {
+    notification.warning({
+      message: `Por favor inicie sesión para continuar con la compra`,
+      description: 'En caso de no tener un usuario puede registrarse con uno nuevo',
+    });
+  }
 
   if(carts.length === 0){
     return (
@@ -97,7 +107,7 @@ const CartPage = () => {
             <div className='cart-cfoot-l'>
               <button type='button' className='clear-cart-btn text-danger fs-15 text-uppercase fw-4' onClick={() => dispatch(clearCart())}>
                 <i className='fas fa-trash'></i>
-                <span className='mx-1'>Eliminar Productos</span>
+                <span className='mx-1'>Vaciar carrito</span>
               </button>
             </div>
 
@@ -107,7 +117,12 @@ const CartPage = () => {
                 <span className='text-orange fs-22 mx-2 fw-6'>{formatPrice(totalAmount)}</span>
               </div>
 
+              {isAuthenticated ?  <Link to={`/checkout`}>
               <button type = "button" className='checkout-btn text-white bg-orange fs-16'>Ir al pago</button>
+              </Link> : (
+                <button type = "button" className='checkout-btn text-white bg-orange fs-16' onClick={validarEmail}>Ir al pago</button>
+              )}
+
             </div>
           </div>
         </div>
