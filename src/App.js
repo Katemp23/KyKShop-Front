@@ -11,6 +11,8 @@ import store from "./store/store";
 import {Provider} from "react-redux";
 import CheckoutPage from './pages/CheckOutPage/CheckoutPage';
 import SuccessfulSalePage from './pages/SuccessfulSalePage/SuccessfulSalePage';
+import ProfilePage from './pages/ProfilePage/ProfilePage';
+import BillsPage from './pages/BillsPage/BillsPage';
 
 function App() {
   return (
@@ -35,6 +37,12 @@ function App() {
             <Route path = "/checkout" element = {<CheckoutPage />} />
             {/* Compra exitosa */}
             <Route path = "/compra-exitosa" element = {<SuccessfulSalePage />} />
+            {/* Perfil del usuario */}
+            <Route path = "/profile" element = {<ProfilePage />} />
+            {/* Facturas del usuario */}
+            <Route path = "/invoices" element = {<BillsPage />} />
+            {/* Móudulo de administrador */}
+            <Route path = "/admin" element = {<SuccessfulSalePage />} />
           </Routes>
 
           <Footer />

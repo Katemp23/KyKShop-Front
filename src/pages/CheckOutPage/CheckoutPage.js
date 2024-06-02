@@ -1,6 +1,6 @@
 // src/components/CheckoutForm.js
-import React, { useState } from 'react';
-import { Form, Input, Button, Select, Row, Col, Divider, notification } from 'antd';
+import React, { useEffect, useState } from 'react';
+import { Form, Input, Button, Select, Row, Col, Divider, notification, message } from 'antd';
 import './CheckoutPage.scss';
 import { clearCart, getAllCarts } from '../../store/cartSlice';
 import { useSelector } from 'react-redux/es/hooks/useSelector';
@@ -23,6 +23,28 @@ const CheckoutPage = () => {
 
   //Navegar entre páginas
   const navigate = useNavigate();
+
+  //Se llama al momento de crear la página
+  useEffect(() => {
+    // Buscar la información del usuario basado en el correo
+    const fetchProfile = async () => {
+      try {
+        const response = await fetch(`${BASE_URL}personas/correo/${user.email}`);
+        const data = await response.json();
+        form.setFieldsValue({firstName : data.nombres});
+        form.setFieldsValue({lastName : data.apellidos})
+        form.setFieldsValue({address : data.direccion})
+        form.setFieldsValue({phone : data.telefono})
+        form.setFieldsValue({idType : data.tipoId})
+        form.setFieldsValue({idNumber : data.identificacion})
+        form.setFieldsValue({city : data.codigoCiudad});
+      } catch (error) {
+        message.error('Error al cargar el perfil');
+      }
+    };
+
+    fetchProfile();
+  }, [user.email, form]);
 
 
   const onFinish = async(values) => { 

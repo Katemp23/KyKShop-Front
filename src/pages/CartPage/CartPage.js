@@ -40,7 +40,7 @@ const CartPage = () => {
           <div className='cart-chead bg-white'>
             <div className='cart-ctr fw-6 font-manrope fs-15'>
               <div className='cart-cth'>
-                <span className='cart-ctxt'>S.N.</span>
+                <span className='cart-ctxt'>Código</span>
               </div>
               <div className='cart-cth'>
                 <span className='cart-ctxt'>Producto</span>
@@ -66,7 +66,8 @@ const CartPage = () => {
                 return (
                   <div className='cart-ctr py-4' key = {cart?.id}>
                     <div className='cart-ctd'>
-                      <span className='cart-ctxt'>{idx + 1}</span>
+                      {console.log(carts)}
+                      <span className='cart-ctxt'>{cart.id}</span>
                     </div>
                     <div className='cart-ctd'>
                       <span className='cart-ctxt'>{cart?.title}</span>
@@ -75,7 +76,8 @@ const CartPage = () => {
                       <span className='cart-ctxt'>{formatPrice(cart?.discountedPrice)}</span>
                     </div>
                     <div className='cart-ctd'>
-                      <div className='qty-change flex align-center'>
+                      <span className='cart-ctxt' >
+                      <div className='qty-change flex align-center justify-center'>
                         <button type = "button" className='qty-decrease flex align-center justify-center' onClick={() => dispatch(toggleCartQty({id: cart?.id, type: "DEC"}))}>
                           <i className='fas fa-minus'></i>
                         </button>
@@ -88,6 +90,7 @@ const CartPage = () => {
                           <i className='fas fa-plus'></i>
                         </button>
                       </div>
+                      </span>
                     </div>
 
                     <div className='cart-ctd'>

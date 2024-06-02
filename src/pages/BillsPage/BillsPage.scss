@@ -1,0 +1,29 @@
+.bills-page {
+    padding: 24px;
+    max-width: 1000px;
+    margin: 0 auto;
+
+    .site-page-header {
+        margin-bottom: 24px;
+    }
+
+    .ant-card {
+        width: 100%;
+    }
+
+    .ant-descriptions-view {
+        margin-bottom: 16px;
+    }
+
+    .ant-card-cover img {
+        height: 150px;
+        object-fit: cover;
+    }
+}
+
+.card-cover-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+  

@@ -66,7 +66,7 @@ const cartSlice = createSlice({
                 return cartTotal += cartItem.totalPrice
             }, 0);
 
-            state.itemsCount = state.carts.length;
+            state.itemsCount = state.carts.reduce((total, item) => total + item.quantity, 0);
         },
 
         toggleCartQty: (state, action) => {

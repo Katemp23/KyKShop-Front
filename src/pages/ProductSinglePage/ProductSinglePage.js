@@ -8,6 +8,7 @@ import Loader from "../../components/Loader/Loader";
 import {formatPrice} from "../../utils/helpers";
 import { addToCart, getCartMessageStatus, setCartMessageOff, setCartMessageOn } from '../../store/cartSlice';
 import CartMessage from "../../components/CartMessage/CartMessage";
+import { notification } from 'antd';
 
 const ProductSinglePage = () => {
   const {id} = useParams();
@@ -37,7 +38,13 @@ const ProductSinglePage = () => {
   const increaseQty = () => {
     setQuantity((prevQty) => {
       let tempQty = prevQty + 1;
-      if(tempQty > product?.stock) tempQty = product?.stock;
+      if(tempQty > product?.stock) {
+        tempQty = product?.stock;
+        notification.info({
+          message: `Máximo de unidades disponibles: ${tempQty}`,
+          description: 'Por el momento no hay mas unidades disponibles para este producto',
+        });
+      }
       return tempQty;
     })
   }
@@ -154,7 +161,8 @@ const ProductSinglePage = () => {
                     </button>
                   </div>
                   {
-                    (product?.stock === 0) ? <div className ='qty-error text-uppercase bg-danger text-white fs-12 ls-1 mx-2 fw-5'>Agotado</div> : ""
+                    (product?.stock === 0) ? <div className ='qty-error text-uppercase bg-danger text-white fs-12 ls-1 mx-2 fw-5'>Agotado</div> 
+                    : <div className ='qty-error text-uppercase bg-info-subtle fs-12 ls-1 mx-2 fw-5'>Unidades disponibles: {product?.stock}</div> 
                   }
                 </div>
 

@@ -4,8 +4,8 @@ import "./Header.scss";
 import Navbar from "../Navbar/Navbar";
 import LoginButton from '../Login/Login';
 import LogoutButton from '../Logout/Logout';
-import Profile from '../Profile/Profile';
 import { useAuth0 } from '@auth0/auth0-react';
+import ProfileMenu from '../ProfileMenu/ProfileMenu';
 
 const Header = () => {
 
@@ -62,7 +62,7 @@ const Header = () => {
                 {isAuthenticated ? (
                   <>
                   <li className='vert-line'></li>
-                  <Profile/>
+                  <ProfileMenu/>
                   </>
                 ) : ( <>
                   <i className="fa-regular fa-user"></i>
