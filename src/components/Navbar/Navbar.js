@@ -33,9 +33,7 @@ const Navbar = () => {
             <i className='fas fa-bars'></i>
           </button>
           <Link to = "/" className='navbar-brand flex align-center'>
-            {/* <span className='navbar-brand-txt mx-2'>
-              <i className='fa-solid fa-bag-shopping'></i>
-            </span> */}
+
             <img src = {logoImg2} alt = "" className='navbar-logo'></img>
             <span className='navbar-brand-txt mx-2'>
               <span className='fw-7'>K&K</span>Shop.
@@ -55,7 +53,7 @@ const Navbar = () => {
 
           <ul className='navbar-nav flex align-center fs-12 fw-4 font-manrope'>
             {
-              // taking only first 8 categories
+              // Toma solamente las primeras 4 categorias
               categories.slice(0, 4).map((category, idx) => (
                 <li className='nav-item no-wrap' key = {idx}>
                   <Link to = {`category/${category.name}`} className='nav-link text-capitalize'>{category.slug}</Link>
