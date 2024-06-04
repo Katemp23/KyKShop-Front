@@ -13,6 +13,7 @@ import CheckoutPage from './pages/CheckOutPage/CheckoutPage';
 import SuccessfulSalePage from './pages/SuccessfulSalePage/SuccessfulSalePage';
 import ProfilePage from './pages/ProfilePage/ProfilePage';
 import BillsPage from './pages/BillsPage/BillsPage';
+import AdminPage from './pages/AdminPage/AdminPage';
 
 function App() {
   return (
@@ -23,26 +24,26 @@ function App() {
           <Sidebar />
 
           <Routes>
-            {/* home page route */}
+            {/* Ruta de la página principal Home */}
             <Route path = "/" element = {<Home />} />
-            {/* single product route */}
+            {/* Ruta de un producto simple */}
             <Route path = "/product/:id" element = {<ProductSingle />} />
-            {/* category wise product listing route */}
+            {/* Ruta de un listado de categorias */}
             <Route path = "/category/:category" element = {<CategoryProduct />} />
-            {/* cart */}
+            {/* Ruta del carrito */}
             <Route path = "/cart" element = {<Cart />} />
-            {/* searched products */}
+            {/* Ruta de la búsqueda de un producto */}
             <Route path = "/search/:searchTerm" element = {<Search />} />
-            {/* Checkout */}
+            {/* Ruta de pago */}
             <Route path = "/checkout" element = {<CheckoutPage />} />
-            {/* Compra exitosa */}
+            {/* Ruta de Compra exitosa */}
             <Route path = "/compra-exitosa" element = {<SuccessfulSalePage />} />
-            {/* Perfil del usuario */}
+            {/* Ruta de Perfil del usuario */}
             <Route path = "/profile" element = {<ProfilePage />} />
-            {/* Facturas del usuario */}
+            {/* Ruta de Facturas del usuario */}
             <Route path = "/invoices" element = {<BillsPage />} />
-            {/* Móudulo de administrador */}
-            <Route path = "/admin" element = {<SuccessfulSalePage />} />
+            {/* Ruta del Móudulo de administrador */}
+            <Route path = "/admin" element = {<AdminPage />} />
           </Routes>
 
           <Footer />
